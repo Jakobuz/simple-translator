@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 500px;
+  background: transparent url('/images/network.svg') no-repeat right center;
+  background-size: 450px;
+}
+
+.title {
+  margin-top: unset;
+  max-width: 50%;
+}
+
+.subtitle {
+  max-width: 50%;
+  font-size: 22px;
+  margin: 0 0 1rem;
+}

@@ -1,0 +1,48 @@
+.header {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 60px;
+}
+
+.container {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.logo {
+  margin-right: auto;
+  color: var(--grey-900);
+  font-weight: bold;
+  font-size: 18px;
+  padding: 1rem 0;
+}
+
+.icon {
+  color: var(--purple-600);
+  vertical-align: middle;
+  margin: -3px 0.5rem 0 0;
+}
+
+.link {
+  padding: 1rem 0;
+  margin-left: 1.5rem;
+  color: var(--grey-900);
+  border-bottom: 2px solid transparent;
+}
+
+.github {
+  margin-right: 0.4rem;
+  vertical-align: middle;
+  margin-top: -3px;
+}
+
+.link:hover,
+.link:focus {
+  color: var(--purple-600);
+}
+
+.current {
+  color: var(--purple-600);
+  border-bottom-color: var(--purple-600);
+}

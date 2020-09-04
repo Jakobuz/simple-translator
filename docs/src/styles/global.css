@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+:root {
+  --purple-50: #e6e6ff;
+  --purple-100: #c4c6ff;
+  --purple-200: #a2a5fc;
+  --purple-300: #8888fc;
+  --purple-400: #7069fa;
+  --purple-500: #5d55fa;
+  --purple-600: #4d3df7;
+  --purple-700: #3525e6;
+  --purple-800: #1d0ebe;
+  --purple-900: #0c008c;
+
+  --teal-050: #effcf6;
+  --teal-100: #c6f7e2;
+  --teal-200: #8eedc7;
+  --teal-300: #65d6ad;
+  --teal-400: #3ebd93;
+  --teal-500: #27ab83;
+  --teal-600: #199473;
+  --teal-700: #147d64;
+  --teal-800: #0c6b58;
+  --teal-900: #014d40;
+
+  --grey-50: #f0f4f8;
+  --grey-100: #d9e2ec;
+  --grey-200: #bcccdc;
+  --grey-300: #9fb3c8;
+  --grey-400: #829ab1;
+  --grey-500: #627d98;
+  --grey-600: #486581;
+  --grey-700: #334e68;
+  --grey-800: #243b53;
+  --grey-900: #102a43;
+
+  --light-blue-50: #e3f8ff;
+  --light-blue-100: #b3ecff;
+  --light-blue-200: #81defd;
+  --light-blue-300: #5ed0fa;
+  --light-blue-400: #40c3f7;
+  --light-blue-500: #2bb0ed;
+  --light-blue-600: #1992d4;
+  --light-blue-700: #127fbf;
+  --light-blue-800: #0b69a3;
+  --light-blue-900: #035388;
+
+  --red-vivid-050: #ffe3e3;
+  --red-vivid-100: #ffbdbd;
+  --red-vivid-200: #ff9b9b;
+  --red-vivid-300: #f86a6a;
+  --red-vivid-400: #ef4e4e;
+  --red-vivid-500: #e12d39;
+  --red-vivid-600: #cf1124;
+  --red-vivid-700: #ab091e;
+  --red-vivid-800: #8a041a;
+  --red-vivid-900: #610316;
+
+  --yellow-50: #fffbea;
+  --yellow-100: #fff3c4;
+  --yellow-200: #fce588;
+  --yellow-300: #fadb5f;
+  --yellow-400: #f7c948;
+  --yellow-500: #f0b429;
+  --yellow-600: #de911d;
+  --yellow-700: #cb6e17;
+  --yellow-800: #b44d12;
+  --yellow-900: #8d2b0b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: unset;
+  font: 400 16px/1.6 Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', sans-serif;
+  text-rendering: optimizeLegibility;
+  color: var(--grey-600);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--grey-900);
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+strong {
+  color: var(--grey-900);
+}
+
+li {
+  margin-top: 0.25rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p > a {
+  color: var(--purple-600);
+  border-bottom: 2px solid var(--purple-600);
+}
+
+p > a:hover,
+p > a:focus {
+  color: var(--grey-900);
+  border-bottom-color: var(--grey-900);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  border: 1px solid var(--grey-100);
+}
+
+th {
+  text-align: left;
+  padding: 0.3rem 1rem;
+}
+
+td {
+  padding: 0.3rem 1rem;
+  border-top: 1px solid var(--grey-100);
+}
+
+:not(pre) > code[class*='language-'] {
+  background: var(--grey-100);
+  color: var(--grey-900);
+}
+
+.gatsby-highlight {
+  background-color: #2d2d2d;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.gatsby-highlight pre[class*='language-'].line-numbers {
+  padding: 0;
+  padding-left: 2.8em;
+  overflow: initial;
+}

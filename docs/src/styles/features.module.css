@@ -1,0 +1,10 @@
+.wrapper {
+  display: flex;
+  margin: 4rem -1rem;
+}
+
+.feature {
+  flex: 0 0 33.3333%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

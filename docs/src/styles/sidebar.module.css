@@ -1,0 +1,40 @@
+.sidebar {
+  border-right: 2px solid var(--grey-50);
+}
+
+.list {
+  padding: unset;
+  margin: unset;
+  list-style-type: none;
+  position: sticky;
+  top: 4rem;
+}
+
+.title {
+  position: sticky;
+  top: 1rem;
+}
+
+.link {
+  display: block;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.is-h2 {
+  padding-left: 1rem;
+}
+
+.is-h3 {
+  padding-left: 2rem;
+  font-size: 85%;
+}
+
+.is-h4 {
+  padding-left: 3rem;
+  font-size: 85%;
+}
+
+.link:hover {
+  background-color: var(--grey-50);
+}

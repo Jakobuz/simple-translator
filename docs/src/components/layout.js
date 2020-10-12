@@ -1,15 +1,12 @@
-import React, { useRef } from 'react';
-import Helmet from 'react-helmet';
-import Header from '../components/header';
-import Footer from '../components/footer';
-import Sidebar from '../components/sidebar';
-import useSiteMetadata from '../hooks/use-sitemetadata';
-import styles from '../styles/layout.module.css';
-import '../styles/global.css';
+import React from 'react'
+import Helmet from 'react-helmet'
+import Navigation from './navigation'
+import useSiteMetadata from '../hooks/use-sitemetadata'
+import 'typeface-source-sans-pro'
+import '../css/styles.css'
 
-function Layout({ children, hasSidebar }) {
-  const ref = useRef();
-  const { title, description, author } = useSiteMetadata();
+function Layout({ children }) {
+  const { title, description, author } = useSiteMetadata()
 
   return (
     <>
@@ -20,27 +17,13 @@ function Layout({ children, hasSidebar }) {
         <meta name="author" content={author} />
       </Helmet>
 
-      <Header />
+      <div className="container mx-auto px-2 flex h-full">
+        <Navigation />
 
-      {hasSidebar ? (
-        <main className={`${styles.container} ${styles.hasSidebar}`}>
-          <Sidebar contentRef={ref} />
-
-          <article ref={ref} className={styles.article}>
-            {children}
-          </article>
-        </main>
-      ) : (
-        <main className={styles.container}>{children}</main>
-      )}
-
-      <Footer />
+        <main className="py-8 flex-1">{children}</main>
+      </div>
     </>
-  );
+  )
 }
 
-Layout.defaultProps = {
-  hasSidebar: true,
-};
-
-export default Layout;
+export default Layout

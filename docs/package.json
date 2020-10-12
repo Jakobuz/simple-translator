@@ -1,34 +1,32 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
-  "license": "0BSD",
+  "name": "simple-translator-docs",
+  "author": "Andreas Remdt <me@andreasremdt.com> (https://andreasremdt.com)",
+  "description": "Guide to using Simple Translator",
+  "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^1.6.16",
-    "@mdx-js/react": "^1.6.16",
-    "gatsby": "^2.24.47",
-    "gatsby-plugin-mdx": "^1.2.34",
-    "gatsby-plugin-react-helmet": "^3.3.10",
-    "gatsby-remark-prismjs": "^3.5.10",
-    "gatsby-remark-slug": "^0.1.0",
-    "gatsby-transformer-remark": "^2.8.28",
-    "prismjs": "^1.21.0",
+    "@mdx-js/mdx": "^1.6.18",
+    "@mdx-js/react": "^1.6.18",
+    "gatsby": "^2.24.63",
+    "gatsby-plugin-mdx": "^1.2.41",
+    "gatsby-plugin-postcss": "^2.3.12",
+    "gatsby-plugin-react-helmet": "^3.3.11",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "typeface-source-sans-pro": "^1.1.5"
   },
   "devDependencies": {
-    "prettier": "2.0.5"
+    "prettier": "2.1.1",
+    "tailwindcss": "^1.8.10"
   },
   "repository": {
     "type": "git",

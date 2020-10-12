@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <test-content></test-content> -->
+    <h1 data-i18n="title">This is some title</h1>
+    <p>{{ title }} {{ video_link }} {{ asfasd }}</p>
+    <p
+      title="{{ title }}"
+      data-i18n="video_link"
+      data-i18n-attr="data-mfp-src"
+      data-mfp-src="assets/videos/video_en.mp4"
+    >
+      And some paragraph
+    </p>
+    <div
+      class="video-popup-item popup-player-html5"
+      data-i18n="section-4.video-url-1"
+      data-i18n-attr="data-mfp-src"
+      data-mfp-src="assets/videos/video.mp4"
+    >
+      <button class="video-popup-btn1">PLay</button>
+    </div>
+    <input
+      type="text"
+      placeholder="type me"
+      title="title me"
+      data-msg="tttr"
+      data-i18n="input.pl input.t"
+      data-i18n-attr="placeholder title"
+    />
+    <script type="module">
+      import Translator from './src/translator.js';
+      // class TestContent extends HTMLElement {
+      //   constructor() {
+      //     super();
+
+      //     this.shadow = this.attachShadow({ mode: 'open' });
+      //     this.shadow.innerHTML = `
+      //       <h1 data-i18n="title">This is some title</h1>
+      //       <p data-i18n="p">And some paragraph</p>
+      //     `;
+      //   }
+      // }
+
+      // customElements.define('test-content', TestContent);
+
+      // function getElementsInsideShadowDOM(elements) {
+      //   var matches = [];
+
+      //   document.querySelectorAll(elements.join(',')).forEach((element) => {
+      //     if (element.shadowRoot) {
+      //       var found = Array.from(
+      //         element.shadowRoot.querySelectorAll('[data-i18n]')
+      //       );
+
+      //       matches.push(...found);
+      //     }
+      //   });
+
+      //   return matches;
+      // }
+
+      // console.log(getElementsInsideShadowDOM(['test-content']));
+
+      var english = {
+        title: 'This is some english title',
+        p: 'And some paragraph',
+        input: {
+          pl: 'english placeholder',
+          t: 'english title',
+        },
+      };
+      var german = {
+        title: 'EIN DEUTSHCER TITEL',
+        p: 'DEUTSCHER TEXT',
+        video_link: 'some other link',
+        'section-4': {
+          'video-url-1': 'SOME URL HERE',
+        },
+        input: {
+          pl: 'DEUTSCHER PLATZ',
+          t: 'DEUTSCHER TITEL',
+        },
+      };
+
+      var t = new Translator({
+        defaultLanguage: 'de',
+        detectLanguage: false,
+        templateTags: true,
+        // selector: getElementsInsideShadowDOM(['test-content']),
+      });
+      // console.log(t);
+      console.log(t.currentLanguage);
+      t.add('en', english).add('de', german);
+      t.translatePageTo('de');
+
+      console.log(t.currentLanguage);
+
+      // setTimeout(() => {
+      //   t.translatePageTo('en');
+      // }, 5000);
+      // console.log(t.currentLanguage);
+      // t.add('de', { title: 'hi' }).translateForKey('titlee');
+      // t.fetch(['de']).then(() => {
+      //   t.translatePageTo('de');
+      // });
+      // t.fetch(['de', 'en']).then(() => console.log('fetched all'));
+      // console.log(t.translateForKey('title', 'de'));
+      // console.log(__('p'));
+
+      // translator.translatePage();
+    </script>
+  </body>
+</html>
